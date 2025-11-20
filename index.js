@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("CI/CD WORKING ");
+  res.send("CI/CD WORKING");
 });
 
-app.listen(3000, () => console.log("Server running onn ports 3000"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));
