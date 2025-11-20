@@ -11,20 +11,16 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm install
+        uses: actions/checkout@v3
 
       - name: Install Railway CLI
-        run: npm install -g @railway/cli
+        run: npm i -g @railway/cli
 
       - name: Deploy to Railway
-        run: railway up --service ${{ secrets.RAILWAY_SERVICE }}
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: |
+          railway up \
+            --project d8c6fb0d-ceea-495d-90c6-8fd31c9bdd84 \
+            --environment bf16088a-d3d9-4f6f-9a8c-0d844e325d38 \
+            --service 91080303-09e2-4cfb-b979-c364e0643ba7
