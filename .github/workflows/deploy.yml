@@ -23,5 +23,5 @@ jobs:
           railway up \
             --project d8c6fb0d-ceea-495d-90c6-8fd31c9bdd84 \
             --environment bf16088a-d3d9-4f6f-9a8c-0d844e325d38 \
-            --service 91080303-09e2-4cfb-b979-c364e0643ba7 \
+            --service 91142f2f-e4d0-4ac8-9384-26eb21b07ee1 \
           || true
